@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "D1/0TtVaA7nD0AdJzSXm0rMVC8VrsGfxEe3f/2eqvL1qbtqS0PqGkqYry74RruYd/b0fDLAWUjPT5yDe9OHGSA==",
+  "dgSpecHash": "VUX/p87yknG2bWnZIYR8oWsubM+QLmT2d1YxY79Sq7T3vqVqAtT/BFYjoQgiAOmjYnqGqUpjXcFyw+TxxEkaHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mertt\\source\\repos\\RedisExampleApp\\RedisExampleApp.API\\RedisExampleApp.API.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0-preview.5.23280.1\\microsoft.entityframeworkcore.8.0.0-preview.5.23280.1.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0-preview.5.23280.1\\microsoft.entityframeworkcore.abstractions.8.0.0-preview.5.23280.1.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.0-preview.5.23280.1\\microsoft.entityframeworkcore.analyzers.8.0.0-preview.5.23280.1.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.0-preview.5.23280.1\\microsoft.entityframeworkcore.inmemory.8.0.0-preview.5.23280.1.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0-preview.5.23280.8\\microsoft.extensions.caching.abstractions.8.0.0-preview.5.23280.8.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0-preview.5.23280.8\\microsoft.extensions.caching.memory.8.0.0-preview.5.23280.8.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0-preview.5.23280.8\\microsoft.extensions.dependencyinjection.8.0.0-preview.5.23280.8.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-preview.5.23280.8\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-preview.5.23280.8.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0-preview.5.23280.8\\microsoft.extensions.logging.8.0.0-preview.5.23280.8.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0-preview.5.23280.8\\microsoft.extensions.logging.abstractions.8.0.0-preview.5.23280.8.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.options\\8.0.0-preview.5.23280.8\\microsoft.extensions.options.8.0.0-preview.5.23280.8.nupkg.sha512",
+    "C:\\Users\\Mertt\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0-preview.5.23280.8\\microsoft.extensions.primitives.8.0.0-preview.5.23280.8.nupkg.sha512"
+  ],
   "logs": []
 }
