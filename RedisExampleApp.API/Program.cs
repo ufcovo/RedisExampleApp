@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using RedisExampleApp.API.Models;
 using RedisExampleApp.API.Repositories;
+using RedisExampleApp.Cache;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +17,21 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "localhost", Version = "v1" });
 });
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+builder.Services.AddSingleton<RedisService>(sp =>
+{
+    return new RedisService(builder.Configuration["CacheOptions:Url"]);
+});
+
+builder.Services.AddSingleton<IDatabase>(sp =>
+{
+    var redisService = sp.GetRequiredService<RedisService>();
+    return redisService.GetDb(7);
+});
 
 var app = builder.Build();
 
@@ -42,7 +55,7 @@ app.UseStaticFiles();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "localhost");
 });
 
 app.UseRouting();
