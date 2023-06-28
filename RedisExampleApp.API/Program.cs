@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using RedisExampleApp.API.Models;
 using RedisExampleApp.API.Repositories;
+using RedisExampleApp.API.Services;
 using RedisExampleApp.Cache;
 using StackExchange.Redis;
 
@@ -20,7 +21,15 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "localhost", Version = "v1" });
 });
 
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductRepository>(sp =>
+{
+    var appDbContext = sp.GetRequiredService<AppDbContext>();
+    var productRepository = new ProductRepository(appDbContext);
+    var redisService = sp.GetRequiredService<RedisService>();
+    return new ProductRepositoryWithCacheDecorator(productRepository, redisService);
+});
+
+builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddSingleton<RedisService>(sp =>
 {
